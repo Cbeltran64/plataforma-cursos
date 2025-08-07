@@ -20,6 +20,12 @@ app.use(express.urlencoded({ extended: true }));
 // Ruta de salud
 app.get('/api/health', (_, res) => res.json({ status: 'OK', uptime: process.uptime() }));
 
+const authRoutes = require('./routes/auth/auth.routes');
+app.use('/api/auth', authRoutes);
+
+const userRoutes = require('./routes/users/users.routes');
+app.use('/api/users', userRoutes);
+
 // Catch 404
 app.use((_, res) => res.status(404).json({ message: 'Ruta no encontrada' }));
 
