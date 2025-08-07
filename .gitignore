@@ -1,0 +1,32 @@
+# Dependencias
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Entorno
+.env
+.env.local
+.env.production
+server/.env
+client/.env
+
+# Build
+client/dist/
+client/build/
+build/
+dist/
+
+# Base de datos
+*.db
+*.sqlite
+server/database/*.db
+server/database/backups/
+
+# Logs
+*.log
+logs/
+server/logs/
+
+# OS
+.DS_Store
+Thumbs.db
